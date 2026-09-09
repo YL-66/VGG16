@@ -131,7 +131,7 @@ def train_model_process(model,train_loader,val_loader,epochs):
         # 计算并保存验证集的loss值
         val_losses_all.append(val_loss / val_num)
         # 计算并保存验证集的准确率
-        val_acc_all.append(val_corrects.double().item() / train_num)
+        val_acc_all.append(val_corrects.double().item() / val_num)
 
         # 打印出每一批次的损失值和精确率
         print('{} Train Loss: {:.4f} Train Acc: {:.4f}'.format(epoch, train_losses_all[-1], train_acc_all[-1]))
